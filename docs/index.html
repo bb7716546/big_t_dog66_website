@@ -10,7 +10,7 @@
 
   <style>
     :root {
-      /* 🖼️ Background image — CHANGE THIS link to anything you like */
+      /* 🖼️ Change this link to switch your wallpaper */
       --background-img: url("https://i.pinimg.com/originals/66/66/cc/6666cc614ec73542d9e9dfa272b6cda0.gif");
 
       /* Accent colors */
@@ -33,7 +33,7 @@
       position: relative;
     }
 
-    /* Dark overlay to improve readability */
+    /* Dark overlay for readability */
     body::before {
       content: "";
       position: fixed;
@@ -206,27 +206,6 @@
       box-shadow: 0 -5px 20px var(--neon-cyan);
       backdrop-filter: blur(3px);
     }
-
-    /* --- Background Changer Button --- */
-    .bg-switch {
-      position: fixed;
-      right: 20px;
-      bottom: 20px;
-      background: linear-gradient(90deg, var(--neon-cyan), var(--neon-pink));
-      color: white;
-      padding: 10px 18px;
-      border: none;
-      border-radius: 8px;
-      font-family: "Orbitron", sans-serif;
-      font-size: 0.9em;
-      cursor: pointer;
-      box-shadow: 0 0 15px var(--neon-cyan);
-      z-index: 20;
-    }
-
-    .bg-switch:hover {
-      box-shadow: 0 0 25px var(--neon-pink);
-    }
   </style>
 </head>
 
@@ -295,22 +274,5 @@
   <footer>
     &copy; 2026 Big_T_Dog66 | All Rights Reserved
   </footer>
-
-  <!-- 🔘 Change Background Button -->
-  <button class="bg-switch" onclick="changeBackground()">Change Background</button>
-
-  <script>
-    const wallpapers = [
-      "https://i.imgur.com/CFhPkoG.jpeg",
-      "https://i.imgur.com/yj2y5bM.jpeg",
-      "https://i.imgur.com/p6yOW8b.jpeg"
-    ];
-    let current = 0;
-
-    function changeBackground() {
-      current = (current + 1) % wallpapers.length;
-      document.body.style.backgroundImage = `url(${wallpapers[current]})`;
-    }
-  </script>
 </body>
 </html>
